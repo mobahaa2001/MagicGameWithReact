@@ -1,8 +1,10 @@
 import './SingleCard.css'
 
 export default function SingleCard({ card, handleChoice, flipped, disabled }) {
+  // HandleClick Function for onClick
   const handleClick = () => {
     if (!disabled) {
+      // handleChoice From App.js--- Get With React Props 
       handleChoice(card)
     }
   }
