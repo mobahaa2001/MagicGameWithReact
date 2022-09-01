@@ -11,11 +11,13 @@ const cardImages = [
   { src: '/img/sword-1.png', matched: false },
 ]
 function App() {
+  // Using React Hook(useState and useEffect)
   const [cards, setCards] = useState([])
   const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceOTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)
+  
   // Shuffle Cards
   const shuffledCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
@@ -57,6 +59,7 @@ function App() {
     }
   }, [choiceOne, choiceTwo])
   console.log(cards)
+  
   // Reset Choices & Increase Turn
   const resetTurn = () => {
     setChoiceOne(null)
